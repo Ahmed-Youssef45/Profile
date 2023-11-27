@@ -7,7 +7,7 @@
 }
 :root{
     --main-color:#242b6b;
-    --second-color:#bbc1db;
+    --second-color:#a9b4e1;
 }
 body{
     width: 100%;
@@ -175,6 +175,8 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-bottom: 20px;
+    background-color: var(--second-color);
     & h1{
         width: 100%;
         text-align: center;
@@ -183,7 +185,7 @@ section{
     }
     .cards{
         display: grid;
-        grid-template-columns: repeat(1, minmax(100px,200px));
+        grid-template-columns: repeat(auto-fit, 200px);
         justify-content: center;
         gap: 15px 10px;
     }
@@ -191,7 +193,7 @@ section{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--second-color);
+        background-color: white;
         padding: 13px;
         text-align: center;
         border-radius: 5px;
@@ -216,17 +218,91 @@ section{
     }
 }
 .projects{
-
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px,200px));
-        justify-content: center;
-        gap: 15px 10px;
-    }
+    background-color: var(--second-color);
     .card{
-        & .imges{
-            
-
+        padding: 0;
+    }
+    .text{
+        padding: 8px;
+    }
+    & .card img{
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+}
+.contact{
+    & h1{
+        margin: 0;
+    }
+    & .text{
+        width: 100%;
+    & span{
+        display: block;
+        font-size: 12px;
+    }
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: white;
+    color: var(--main-color);
+    .icons{
+        display: flex;
+        gap: 0 10px;
+    & a{
+        color: var(--main-color);
+    }
+    }
+}
+@media (min-width: 450px){
+    .sections{
+        & h1{
+            font-size: 2em;
+        }
+    }
+    .contact{
+        margin-top: -79px;
+        height: 50vh;
+    }
+}
+@media (min-width: 660px){
+    .sections{
+        .cards{
+            grid-template-columns: repeat(3, 200px);
+        }
+    }
+    .contact{
+        .cards{
+            grid-template-columns: repeat(auto-fit, 280px);
+        }
+    }
+}
+@media (min-width: 900px){
+    section{
+        padding: 0 200px;
+    }
+    header{
+        padding: 30px 200px;
+        .logo{
+            font-size: 2em;
+        }
+        & .icon{
+            transform: scale(1.5);
+        }
+        & nav ul{
+            font-size: 1.4em;
+        }
+    }
+    .main-section{
+        .hello{
+            transform: scale(2) translate(50%, 50%);
+        }
+    }
+    .sections{
+        & h1{
+            font-size: 4em;
         }
     }
 }
