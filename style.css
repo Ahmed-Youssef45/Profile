@@ -16,6 +16,14 @@ body{
 section{
     padding: 0 20px;
 }
+.top{
+    position: fixed;
+    right: 4%;
+    bottom: 9%;
+    font-size: 2em;
+    color: var(--main-color);
+    z-index: 999;
+}
 header{
     padding: 20px;
     display: flex;
@@ -33,7 +41,10 @@ header{
     text-transform: uppercase;
     font-family: "Playfair Display", sans-serif;
     letter-spacing: 1px;
-    color: var(--main-color);
+    & a{
+        color: var(--main-color);
+        text-decoration: none;
+    }
 }
 nav{
     position: relative;
@@ -178,7 +189,7 @@ section{
     padding-bottom: 20px;
     background-color: var(--second-color);
     & h1{
-        width: 100%;
+        /* width: 100%; */
         text-align: center;
         color: var(--main-color);
         margin: 20px auto;
@@ -279,12 +290,20 @@ footer{
         }
     }
 }
-@media (min-width: 900px){
+@media (min-width: 1200px){
+    .top{
+        position: fixed;
+        right: 7.9%;
+        bottom: 11%;
+        font-size: 4em;
+        color: var(--main-color);
+        z-index: 999;
+    }
     section{
-        padding: 0 200px;
+        padding: 0 150px;
     }
     header{
-        padding: 30px 200px;
+        padding: 30px 150px;
         .logo{
             font-size: 2em;
         }
@@ -303,6 +322,29 @@ footer{
     .sections{
         & h1{
             font-size: 4em;
+        }
+        .cards{
+            font-size: 1.5em;
+            grid-template-columns: repeat(auto-fit, 400px);
+            gap: 9% 4%;
+        }
+    }
+    .services{
+        .card {
+            padding: 40px;
+            & i{
+                margin: 20px 0;
+                font-size: 3.4em;
+            }
+        }
+    }
+    footer{
+        font-size: 2em;
+        font-weight: bold;
+        padding: 30px 150px;
+        .icons{
+            font-size: 1.1em;
+            gap: 0 50px;
         }
     }
 }
